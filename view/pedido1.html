@@ -40,14 +40,17 @@
         </div>
         <div class="row" uib-collapse="!pedido.cliente">
             <!--  <div class="row"> -->
+
+
             <div class="col-md-2">
-                <img ng-if="selectedProduct" class="img-responsive img-produto" src="view/images/{{selectedProduct.foto}}">
+                <img ng-if="selectedProduct && selectedProduct.foto.code" class="img-responsive img-produto" src="view/images/{{selectedProduct.foto.code}}">
+                <img ng-if="selectedProduct && !selectedProduct.foto.code" class="img-responsive img-produto" src="view/images/{{selectedProduct.foto}}">
             </div>
             <div class="col-md-10">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="form-group">
-                            <label>Nome</label>
+                            <label>Produto</label>
                             <div class="btn-group form-control" uib-dropdown is-open="status.isopen">
                                 <button id="single-button" type="button" class="btn-dropdown" uib-dropdown-toggle ng-disabled="disabled">
                                     {{selectedProduct.name}} <span class="caret"></span>
@@ -58,28 +61,26 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-3">
                         <div class="form-group">
                             <label for="code">Código</label>
                             <span class="span-info">{{selectedProduct.code}}</span>
                         </div>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-3">
                         <div class="form-group">
-                            <label class="multiline">Valor R$</label>
+                            <label >Valor R$</label>
                             <input class="span-info" type="text" ng-model="selectedProduct.valor">
                         </div>
                     </div>
-                    <div class="col-md-2">
-                        <div class="form-group">
-                        </div>
-                    </div>
+        
                 </div>
+<!-- 
                 <div class="row" uib-collapse="!pedido.cliente">
-                    <!--                 <div class="row"> -->
                     <div class="col-md-2">
                         <span class="cota-disponivel"> Cota disponível: </span>
                     </div>
+
                     <div class="col-md-2">
                         <div class="form-group">
                             <label>GNV</label>
@@ -98,6 +99,7 @@
                             <span class="span-info" ng-class="{'cota-info': selectedProduct.tipoBloqueio == 'zona', 'cota-info-estourada':estourouCota == true && selectedProduct.cotaLivre == false}">{{selectedProduct.zona}}</span>
                         </div>
                     </div>
+
                     <div class="col-md-2">
                         <div class="form-group" ng-show="selectedProduct.tipoEstoque == 'geral'">
                             <label>Estoque</label>
@@ -111,7 +113,9 @@
                     <div class="col-md-2">
                         <span class="span-info selected-info" ng-show="selectedProduct.cotaLivre">Cota Livre</span>
                     </div>
+
                 </div>
+                 -->
             </div>
         </div>
     </form>

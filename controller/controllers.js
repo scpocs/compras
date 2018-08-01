@@ -147,7 +147,7 @@ angular.module("App.controllers", [])
         $rootScope.products = [{
             code: '400001',
             name: 'Produto 1',
-            cotaLivre: false,
+            cotaLivre: true,
             tipoBloqueio: 'gnv',
             tipoEstoque: 'geral',
             estoque: '100000',
@@ -176,7 +176,7 @@ angular.module("App.controllers", [])
         }, {
             code: '400003',
             name: 'Produto 3',
-            cotaLivre: false,
+            cotaLivre: true,
             tipoBloqueio: 'gnv',
             tipoEstoque: 'cor',
             estoque: '20000',
@@ -203,7 +203,7 @@ angular.module("App.controllers", [])
         }, {
             code: '400004',
             name: 'Produto 4',
-            cotaLivre: false,
+            cotaLivre: true,
             tipoBloqueio: 'zona',
             tipoEstoque: 'tamanho',
             estoque: '60000',
@@ -550,17 +550,17 @@ angular.module("App.controllers", [])
         $scope.links = [{
             title: "Cadastros",
             icon: "fa-user",
-            text: "Gerenciador de Cadastros Alpargatas",
+            text: "Gerenciador de Cadastros",
             link: "/cadastros"
         }, {
             title: "Consultas",
             icon: "fa-search",
-            text: "Consultar Pedidos Alpargatas",
+            text: "Consultar Pedidos",
             link: "/consultas"
         }, {
             title: "Criar Pedidos",
             icon: "fa-pencil-square-o",
-            text: "Gerar novo Pedido Alpargatas",
+            text: "Gerar novo Pedido",
             link: "/pedido1"
         }];
 
@@ -617,29 +617,29 @@ angular.module("App.controllers", [])
         $scope.links = [{
             title: "Estrutura comercial",
             icon: "fa-building-o",
-            text: "Cadastros Alpargatas",
+            text: "Cadastro da estrutura",
             link: "/cadastro2"
         }, {
             title: "Clientes",
             icon: "fa-users",
-            text: "Cadastros Alpargatas",
+            text: "Cadastros de clientes",
 
             link: "/cadastro3"
         }, {
-            title: "Produtos/Cotas",
+            title: "Produtos",
             icon: "fa-laptop",
-            text: "Cadastros Alpargatas",
+            text: "Cadastros produtos",
 
             link: "/cadastro1"
         }, {
             title: "Plano de vendas",
             icon: "fa-gift",
-            text: "Cadastros Alpargatas",
+            text: "Cadastros plano",
             link: "/cadastro4"
         }, {
             title: "Disponibilidade",
             icon: "fa-th",
-            text: "Cadastros Alpargatas",
+            text: "Cadastros disponibilide",
 
             link: "/cadastro5"
         }];

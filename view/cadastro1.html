@@ -4,7 +4,7 @@
             <tr>
                 <th>Codigo</th>
                 <th>Nome</th>
-                <th>cotaLivre</th>
+                <!-- <th>cotaLivre</th> -->
                 <th>valor</th>
                 <th>zona</th>
                 <th>gnv</th>
@@ -16,9 +16,9 @@
             <tr ng-repeat="product in products">
                 <th scope="row">{{product.code}}</th>
                 <td>{{product.name}}</td>
-                <td>
+  <!--               <td>
                     <i class="fa" ng-class="{'fa-check-circle':product.cotaLivre, 'fa-times': !product.cotaLivre}"></i>
-                </td>
+                </td> -->
                 <td>{{product.valor}}</td>
                 <td>{{product.zona}}</td>
                 <td>{{product.gnv}}</td>
@@ -43,19 +43,19 @@
                         <input type="text" class="form-control" ng-model="newProduct.name">
                     </div>
                 </div>
-                <div class="col-md-1">
+      <!--           <div class="col-md-1">
                     <div class="form-group">
                         <label>Cota Livre</label>
                         <input type="checkbox" class="form-control" ng-model="newProduct.cotaLivre">
                     </div>
-                </div>
+                </div> -->
                 <div class="col-md-1">
                     <div class="form-group">
                         <label>Valor</label>
                         <input type="number" class="form-control" ng-model="newProduct.valor">
                     </div>
                 </div>
-                <div class="col-md-2">
+                <!-- <div class="col-md-2">
                     <div class="form-group">
                         <label>Zona</label>
                         <input type="number" class="form-control" ng-model="newProduct.zona">
@@ -72,7 +72,7 @@
                         <label>GRV</label>
                         <input type="number" class="form-control" ng-model="newProduct.grv">
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="row">
                 <div class="col-md-2">
